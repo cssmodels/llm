@@ -5,9 +5,10 @@ Instruction-tuned Large Language Models (LLMs) have recently emerged as a powerf
 
 ## Description
 ### CODE
-- LLMAnalysis.ipnyb runs ChatGPT on the data and stores the result
-- MTURK.ipnyb runs MTurk to collect data from crowd workers
-- Results.ipnyb analyzes the resulting data
+- RunLLM.ipnyb runs ChatGPT on the data and stores the result
+- MTURK.ipnyb uses the MTurk API to collect data from crowd workers
+- ResultAnalysis.ipnyb analyzes the performance of the different models.
+- SupervisedModels.ipnyb runs the Naive-Bayes and BERT models and analyzes their performance.
 - Appendix1.ipnyb carries out analysis for Appendix 1: running a classification analysis on social media users for whom the labels are not a priori known.
 - Appendix2.ipnyb carries out analysis for Appendix 2: measuring the reliability of the analysis to small variations in the prompt.
 
@@ -16,9 +17,7 @@ Instruction-tuned Large Language Models (LLMs) have recently emerged as a powerf
 - data/expert/experts.csv contain the expert coding of the US senator tweets.
 - data/mturk/MTURK.csv contain the MTURK coding of the US senator tweets.
 
-- data/regular/RegularPeopleExpert[1-2].csv contain the expert coding of regular people's tweets. Relating to Appendix 1.
+- data/regular/RegularPeopleExpert[1-2].csv contain the expert coding of regular people's tweets. (Relating to Appendix 1.)
 
 - data/country/[COUNTRY]_sample_tweets.csv contains the random sample of tweets for a given country.
 - data/country/tweet_process_[COUNTRY].pkl contains the sample of tweets for a given country, classified by the LLM.
-
-(Note that as CSV files with dataframes do not support arrays in columns, the code uses pickles.)
